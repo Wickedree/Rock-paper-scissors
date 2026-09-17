@@ -31,9 +31,6 @@ function getHumanChoice() {
     return userPlay;
 }
 
-let humanScore = 0;
-let computerScore = 0;
-
 function playRound (humanChoice, computerChoice) {
     if (humanChoice === "rock" && computerChoice === "scissors" || humanChoice === "paper" && computerChoice === "rock" || humanChoice === "scissors" && computerChoice === "paper") {
         humanScore++
@@ -46,6 +43,33 @@ function playRound (humanChoice, computerChoice) {
     }
 }
 
-playRound (getHumanChoice(), getComputerChoice())
-console.log(humanScore);
-console.log(computerScore);
+//playRound (getHumanChoice(), getComputerChoice())
+
+function playGame (){
+    let humanScore = 0;
+    let computerScore = 0;
+
+   function playRound (humanChoice, computerChoice) {
+    if (humanChoice === "rock" && computerChoice === "scissors" || humanChoice === "paper" && computerChoice === "rock" || humanChoice === "scissors" && computerChoice === "paper") {
+        humanScore++
+        console.log("You Win!")
+    } else if (computerChoice === "rock" && humanChoice === "scissors" || computerChoice === "paper" && humanChoice === "rock" || computerChoice === "scissors" && humanChoice === "paper") {
+        console.log("You Lose!")
+        computerScore++
+    } else {
+        console.log("It's a tie!")
+    }
+}
+    playRound (getHumanChoice(), getComputerChoice())
+    console.log(humanScore, computerScore)
+    playRound (getHumanChoice(), getComputerChoice())
+    console.log(humanScore, computerScore)
+    playRound (getHumanChoice(), getComputerChoice())
+    console.log(humanScore, computerScore)
+    playRound (getHumanChoice(), getComputerChoice())
+    console.log(humanScore, computerScore)
+    playRound (getHumanChoice(), getComputerChoice())
+    console.log(humanScore, computerScore)
+}
+
+playGame()
