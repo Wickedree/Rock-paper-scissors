@@ -15,15 +15,15 @@ function getComputerChoice() {
 }
 
 function getHumanChoice() {
-    let userInput = prompt("Please enter your play (use only lowercase)");
+    let userInput = prompt("Please, enter your play:");
     
     let userPlay
 
-    if (userInput === "rock") {
+    if (userInput.toLowerCase() === "rock") {
         userPlay = "rock";
-    } else if (userInput ==="paper") {
+    } else if (userInput.toLowerCase() ==="paper") {
         userPlay = "paper";
-    } else if (userInput === "scissors") {
+    } else if (userInput.toLowerCase() === "scissors") {
         userPlay = "scissors"
     } else {
         userPlay = "No Play";
@@ -36,3 +36,10 @@ getHumanChoice();
 
 let humanScore = 0;
 let computerScore = 0;
+
+/*function playRound (humanChoice, computerChoice) {
+    let humanChoice = getHumanChoice;
+    let computerChoice = getComputerChoice;
+
+
+}*/
